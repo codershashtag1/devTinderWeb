@@ -16,6 +16,7 @@ const Feed = () => {
       if (feed) return;
       let res = await axios(`${BASE_URL}/user/feed`, { withCredentials: true })
       if (res.status === 200) {
+        console.log(res.data)
         dispatch(addFeed(res.data))
       }
     } catch (error) {
@@ -36,7 +37,7 @@ const Feed = () => {
   }
 
   return (
-    feed && (
+    feed && feed.length > 0 && (
       <div className="flex justify-center items-center my-10">
         <UserCard user= {feed[0]} />
       </div>

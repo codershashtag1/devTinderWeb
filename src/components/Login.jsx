@@ -80,7 +80,7 @@ const Login = () => {
   }
 
   return (
-    <div className='flex justify-center items-center my-50'>
+    <div className='flex justify-center items-center my-20'>
       <div className="card card-dash bg-base-300 w-96">
         <div className="card-body">
           <div className="flex flex-col w-full space-y-8">

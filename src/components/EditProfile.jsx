@@ -30,11 +30,13 @@ const EditProfile = ({ user }) => {
         gender
       },{ withCredentials: true })
       if(res.status === 200) {
-        dispatch(addUser(res.data))
-        setShowToast(true);
-        setTimeout(() => {
-          setShowToast(false);
-        }, 3000);
+        if(res.data != "No Change Found") {
+          dispatch(addUser(res.data))
+          setShowToast(true);
+          setTimeout(() => {
+            setShowToast(false);
+          }, 3000);
+        } 
       }
 
     } catch (error) {

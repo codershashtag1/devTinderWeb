@@ -6,6 +6,10 @@ import { useEffect } from 'react';
 const Premium = () => {
   const [premiumUser, setPremiumUser] = React.useState(false)
 
+  useEffect(() => {
+    verifyPremiumUser()
+  }, []);
+
   const verifyPremiumUser = async() => {
     try {  
       const res = await axios.get(`${BASE_URL}/payment/verifyPremiumUser`, {}, {
@@ -17,8 +21,6 @@ const Premium = () => {
       console.error("Error verifying premium user:", error);
     } 
   }
-
-
 
   const handleBuyPremium = async(type) => {
     try {
@@ -48,7 +50,7 @@ const Premium = () => {
           theme: {
             color: '#F37254'
           },
-          handler: verifyPremiumUser()
+          handler: verifyPremiumUser
         };
 
         const rzp = new window.Razorpay(options);
@@ -59,10 +61,6 @@ const Premium = () => {
       console.error("Error buying premium membership:", error);
     }
   }
-
-  useEffect(() => {
-    verifyPremiumUser()
-  }, []);
 
   if(premiumUser) {
     return (

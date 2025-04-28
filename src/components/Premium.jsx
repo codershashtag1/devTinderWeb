@@ -72,7 +72,7 @@ const Premium = () => {
 
   return (
     <div className="flex flex-col md:flex-row gap-20 p-15 justify-center items-center my-10">
-      <div className="card w-[420px] h-[400px] bg-gradient-to-br from-[#5c4400] to-[#b08d00] shadow-xl border border-yellow-700 rounded-2xl hover:scale-105 transition-transform duration-300">
+      <div className="card w-[320px] h-[380px] bg-gradient-to-br from-[#5c4400] to-[#b08d00] shadow-xl border border-yellow-700 rounded-2xl hover:scale-105 transition-transform duration-300">
         <div className="card-body text-gray-200">
           <h1 className="card-title text-3xl font-bold text-yellow-400">Gold Membership</h1>
           <p className="text-gray-400 text-2xl">Exclusive benefits for premium users. Early access, VIP support, and more!</p>
@@ -88,7 +88,7 @@ const Premium = () => {
         </div>
       </div>
 
-      <div className="card w-[420px] h-[400px] bg-gradient-to-br from-[#4f4f4f] to-[#9c9c9c] shadow-xl border border-gray-500 rounded-2xl hover:scale-105 transition-transform duration-300">
+      <div className="card w-[320px] h-[380px] bg-gradient-to-br from-[#4f4f4f] to-[#9c9c9c] shadow-xl border border-gray-500 rounded-2xl hover:scale-105 transition-transform duration-300">
         <div className="card-body text-gray-200">
           <h1 className="card-title text-3xl font-bold text-gray-300">Silver Membership</h1>
           <p className="text-gray-400 text-2xl">Priority support and member-only offers. Perfect for active users!</p>

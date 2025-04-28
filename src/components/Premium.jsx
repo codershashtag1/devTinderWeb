@@ -71,7 +71,7 @@ const Premium = () => {
   }
 
   return (
-    <div className="flex flex-col md:flex-row gap-20 p-15 justify-center items-center my-10">
+    <div className="flex flex-col md:flex-row gap-20 p-15 justify-center items-center">
       <div className="card w-[320px] h-[380px] bg-gradient-to-br from-[#5c4400] to-[#b08d00] shadow-xl border border-yellow-700 rounded-2xl hover:scale-105 transition-transform duration-300">
         <div className="card-body text-gray-200">
           <h1 className="card-title text-3xl font-bold text-yellow-400">Gold Membership</h1>

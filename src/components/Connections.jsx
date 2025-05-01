@@ -4,6 +4,7 @@ import { BASE_URL } from '../utils/constants'
 import { setConnection } from '../utils/connectionSlice'
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 const Connections = () => {
   const dispatch = useDispatch()
@@ -49,14 +50,15 @@ const Connections = () => {
               className='h-24 w-24 rounded-full object-cover border-2 border-gray-300'
             />
 
-            <div className='text-left'>
+            <div className='text-left flex-1'>
               <h2 className='text-2xl font-semibold text-white'>{firstName} {lastName}</h2>
               {age && gender && (
-                <p className='text-sm text-gray-400 mt-1'>{`${age}, ${gender}`}</p>
+          <p className='text-sm text-gray-400 mt-1'>{`${age}, ${gender}`}</p>
               )}
-              <p className='text-gray-300 mt-2'>
-                {about}
-              </p>
+              <p className='text-gray-300 mt-2'>{about}</p>
+            </div>
+            <div className='self-center sm:self-end'>  
+              <Link to={'/chat/' + _id}><button className='btn btn-xl btn-primary mt-4'>Chat</button></Link>
             </div>
           </div>
         )
